@@ -1,0 +1,77 @@
+/* SnakeGame.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1b5e20;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: #2e7d32;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  h2 {
+    color: #ff5252;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  canvas {
+    border: 4px solid #ffffff;
+    border-radius: 6px;
+    background-color: #000;
+    margin-top: 10px;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .controls button {
+    background: #1e88e5;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+  }
+  
+  .controls button:hover {
+    background: #1565c0;
+  }
+  
+  .controls button:active {
+    transform: scale(0.95);
+  }
+  
+  .controls .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  

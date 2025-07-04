@@ -1,0 +1,108 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background Gradient */
+body {
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Centering the Game Hub */
+.game-hub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+/* Title Styling */
+.game-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff00ff, #ff8800, #ffee00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse-glow 2s infinite alternate;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+  margin-bottom: 2rem;
+}
+
+/* Game Card Grid */
+.game-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 90%;
+  max-width: 800px;
+}
+
+@media (min-width: 640px) {
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .game-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Game Selection Cards */
+.game-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Custom Background Colors */
+.blue-card { background-color: #007bff; }
+.green-card { background-color: #28a745; }
+.yellow-card { background-color: #ffc107; color: black; }
+.purple-card { background-color: #6f42c1; }
+.red-card { background-color: #dc3545; }
+
+/* Floating Particles */
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(-15px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.6; }
+}
+
+.floating-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: float 5s infinite ease-in-out;
+}
+
+/* Pulsing Glow Animation */
+@keyframes pulse-glow {
+  from { text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); }
+  to { text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8); }
+}
